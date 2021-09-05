@@ -1,0 +1,382 @@
+
+html{
+    scroll-behavior: smooth;
+}
+header{
+
+    height: 70px;
+    width: 100%;
+    background-color: #1D1111;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+
+}
+
+h1,body{
+    margin: 0;
+}
+
+#computer-nav{
+
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+
+}
+
+
+
+@media only screen and (min-width: 901px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    #computer-nav{display: none;}
+
+    .hamburger{
+        width: 320px;
+        height: 260px;
+        background: none;
+        position: relative;
+
+    }
+
+    #check-menu{
+        display: none;
+
+    }
+
+    label{
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-size: 20px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 2;
+        color: #e8e8e8;
+        transition: 1s;
+    }
+
+    .main-menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: none;
+        bottom: 0;
+        left: 0;
+        transition: 1s;
+
+    }
+
+    .main-menu a{
+        text-align: center;
+        display: block;
+        width: 100%;
+        padding: 10px 0px;
+        color: #1D1111;
+        text-decoration: none;
+        max-height: 0;
+        font-size: 0;
+        pointer-events: none;
+        cursor: default;
+        line-height: 35px;
+
+
+    }
+    .main-menu a:first-child{
+        margin-top: 40px;
+    }
+
+    #check-menu:checked ~ .main-menu a{
+        max-height: 220px;
+        font-size: 25px;
+        pointer-events: auto;
+    }
+
+    #check-menu:checked ~ .main-menu a:hover{
+        background-color: #1D1111;
+        color: white;
+        transition: 1s;
+    }
+
+    #check-menu:checked ~ .main-menu{
+        background: #e8e8e8;
+    }
+
+    #check-menu:checked ~ label{
+        color: black;
+    }
+}
+
+
+
+nav[id="computer-nav"] a{
+    width: 130px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+nav[id="computer-nav"] a:hover{
+    background-color: #e8e8e8;
+    color: black;
+    transition: 1s;
+}
+
+section[id="Jane"]{
+    width: 100%;
+    height: 900px;
+    background: url("images/bg.jpg");
+}
+
+section[id="Jane"] h1{
+    white-space: pre;
+    font-size: 50px;
+    padding: 700px 0 0 200px;
+    color: white;
+}
+section[id="about"]{
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 800px;
+}
+
+section[id="about"] p{
+    white-space: pre;
+
+}
+
+.txt-about-me{
+    margin-left: 50px;
+    font-size: 25px;
+}
+
+
+.txt-about-me p{
+    margin-top: 5px;
+    line-height: 35px;
+}
+.txt-about-me h2{
+    font-size: 35px;
+    color: #1D1111;
+    margin-bottom: 5px;
+    padding-left: 20px;
+
+}
+
+img[src="images/image.jpg"]{
+    position: relative;
+    top:-60px;
+    left: 200px;
+    z-index: 1;
+}
+
+img[src="images/person.jpeg"]{
+    position: relative;
+    left: -50px;
+    bottom: -10px;
+    z-index: 2;
+}
+
+section[id="portfolio"]{
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 100%;
+    color: #1D1111;
+    font-size: 35px;
+
+}
+
+.portfolio{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    width: 1450px;
+    height: 600px;
+}
+
+.portfolio button{
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    border: 0px;
+    background-color:#e8e8e8;
+    color: black;
+
+    border-radius: 15px;
+}
+
+.portfolio button:hover{
+    background-color: #2f1e1e;
+    color: white;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+.portfolio button:first-child{
+    margin-right: 550px;
+}
+.portfolio button:last-child{
+    margin-left: 550px;
+}
+
+
+
+section[id="contacts"]{
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+section[id="contacts"] h2{
+    font-size: 35px;
+}
+
+section[id="contacts"] p{
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0;
+    width: 700px;
+}
+
+section[id="contacts"] a{
+    color: blue;
+}
+
+section[id="contacts"] a:hover{
+    background-color: #d9d9d9;
+}
+
+
+.svg-img svg{
+    flex-flow: wrap row;
+    margin: 20px 0px 20px 20px;
+   /* margin-left:20px;
+    margin-bottom: 20px;*/
+    padding: 3px;
+}
+
+.svg-img svg:first-child{
+    margin-left: 0px;
+}
+
+.svg-img svg:hover{
+    transition: 0.5s;
+    background-color: #939393;
+    border-radius: 7px;
+}
+
+footer{
+    height: 100px;
+    background-color: #1D1111;
+}
+
+footer p{
+    text-align: center;
+    padding-top: 15px;
+    margin: 0px;
+    height: 35px;
+    color: white;
+    font-size: 25px;
+}
+footer p:nth-child(2){
+    padding-top: 0px;
+    text-align: center;
+    padding-top: 0px;
+    margin: 0px;
+}
+
+.world#whole-world.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+
+#popup-flash,
+#popup-piano{
+    position: fixed;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 800px;
+    padding: 50px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    background: white;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: pre-wrap;
+    font-size: 20px;
+    visibility: hidden;
+    opacity: 0;
+    border: 6px solid #2f1e1e;
+    border-radius: 7px;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+#popup-flash.active,
+#popup-piano.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#popup-flash h2,
+#popup-piano h2{
+    font-size: 35px;
+    margin: 0;
+    color: #1D1111;
+}
+
+#closeF,
+#closeP{
+    margin-top: 20px;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    border: 0px;
+    background-color:#e8e8e8;
+    color: black;
+    border-radius: 15px;
+}
+
+#closeF:hover,
+#closeP:hover{
+    background-color: #2f1e1e;
+    color: white;
+    transition: 1s;
+}
